@@ -1,4 +1,4 @@
-package com.ashokit;
+package com.civiledu;
 
 class SbRestAppApplicationTests {
 
