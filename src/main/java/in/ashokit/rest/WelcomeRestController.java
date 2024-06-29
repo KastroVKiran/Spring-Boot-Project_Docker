@@ -1,25 +1,15 @@
-package in.ashokit.rest;
+package in.kastro.rest;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class WelcomeRestController {
 
-	private Logger logger = LoggerFactory.getLogger(WelcomeRestController.class);
+    @GetMapping("/welcome")
+    public String welcome() {
+        return "Welcome to my Spring Boot application!";
+    }
 
-	public WelcomeRestController() {
-		logger.info("***** WelcomeRestController::Constructor *****");
-	}
-
-	@GetMapping
-	public String welcomeMsg() {
-		logger.info("***** welcomeMsg() execution start *****");
-		String msg = "Welcome to CIVIL Edu..!!";
-		logger.info("***** welcomeMsg() execution end *****");
-		return msg;
-	}
+    // Add more methods as needed for other endpoints
 }
